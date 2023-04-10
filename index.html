@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RA Monitoring</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="loginBar display_flex">
+            <div class="select display_flex ">
+                <div>
+                    RA Monitoring
+                </div>
+                <img src="images/Arrow 1 (Stroke).png" alt="">
+            </div>
+
+            <div class="options">
+                <div class="option">RA Monitoring</div>
+                <div class="option">Keyword Search</div>
+                <div class="option">Planogram</div>
+            </div>
+
+            <div class="homepage_userLogin display_flex">
+                <img src="Union.png" alt="user image">
+                <button class="btn">Login</button>
+            </div>
+        </div>
+        <div class="container display_flex homepage">
+            <img src="Introductory Content for RA Monitoring.png" alt="">
+            <div class="logIn_div">
+                <form action="" class="form display_flex_col">
+
+                    <h2>Login to your account</h2>
+                    <div>
+
+                        <label for="email">Email</label><br>
+                        <input type="email" id="user_email" class="user_info" value=" ">
+                    </div>
+                    <div>
+
+                        <label for="email">Password</label><br>
+                        <input type="text" id="user_password" class="user_info" value=" ">
+                    </div>
+                    <div>
+
+                        <i> <a>Forgot Password?</a></i>
+                    </div>
+                    <div class="display_flex rememberMe_div">
+
+                        <input type="checkbox" name="remember" value="remember me" id="rememberMe">
+                        <label for="remember">remember me</label>
+                    </div>
+                    <button id="signin_btn">Sign-in</button>
+                </form>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+    <script>
+        let user_info = document.querySelectorAll('.user_info')
+        let user_email = document.querySelector('#user_email')
+        let user_password = document.querySelector('#user_password')
+        let signin_btn = document.querySelector('#signin_btn')
+
+
+
+        user_email.addEventListener("keyup", () => {
+            user_email.style.background = "white"
+            user_email.style.border = "1px solid rgba(0, 0, 0, 0.2)"
+
+        })
+        user_password.addEventListener("keyup", () => {
+            user_password.style.background = "white"
+            user_password.style.border = "1px solid rgba(0, 0, 0, 0.2)"
+        })
+        user_info.forEach(elem => {
+
+            elem.addEventListener('keyup', () => {
+
+                if (user_email.value != ' ' && user_password.value != ' ') {
+
+
+                    signin_btn.style.background = " linear-gradient(270deg, #447AEC 0%, #2A5CDC 100%)"
+                    signin_btn.style.color = "white"
+                    // signin_btn.addEventListener('click',()=>{
+                    //     user_name.value == ' ' && user_number.value == ' '
+
+                    // })
+
+                }
+
+            })
+        })
+
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
