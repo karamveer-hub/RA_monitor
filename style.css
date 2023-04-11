@@ -184,6 +184,7 @@ padding: calc(50/1920 * 100vw) calc(20/1920 * 100vw);
 .homepage .form .rememberMe_div label{
     margin-right:5px;
     color:var(--blueText);
+    font-size:calc(16/1920 * 100vw);
 }
 
 .homepage .form input:not([type=checkbox]){
@@ -218,7 +219,7 @@ letter-spacing: 0.2px;
 
 }
 .homepage .form label{
-    font-size: 10.3px;
+    font-size: calc(20/1920 * 100vw);
     text-align: left;
 }
 
